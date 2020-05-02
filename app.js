@@ -234,8 +234,8 @@ let ballProperty = {
     currentY: 100,
 }
 
-let user = new Rectangle(30, 100, 30, 200, 'white');
-let comp = new Rectangle(canvas.width - 80, 100, 30, 200, 'white');
+let user = new Rectangle(0, 100, 30, 200, 'white');
+let comp = new Rectangle(canvas.width - 30, 100, 30, 200, 'white');
 let ball = new Rectangle(ballProperty.x, ballProperty.y, 30, 30, 'gold');
 
 let score = {
