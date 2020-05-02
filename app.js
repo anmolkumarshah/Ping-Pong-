@@ -22,10 +22,17 @@ window.addEventListener('mousemove', function (event) {
     mouse.y = event.clientY;
 })
 
-window.addEventListener('touchstart', function(event){
+window.addEventListener('touchmove', function(event){
     mouse.x = event.touches[0].clientX;
     mouse.y = event.touches[0].clienty;
 })
+
+/*
+window.addEventListener('touchend', function(event){
+    mouse.x = event.changedTouches[0].clientX;
+    mouse.y = event.changedTouches[0].clienty;
+})
+*/
 
 
 
@@ -33,6 +40,9 @@ const mouse = {
     x: undefined,
     y: undefined,
 }
+
+
+
 
 /*******************************************************/
 
@@ -268,6 +278,7 @@ function animate() {
 
     if (player.testCollision(ball)) {
         increaseSpeed();
+        this.color = "gold";
         if(player == 'user'){
             score.user ++;
         }
@@ -288,6 +299,7 @@ function animate() {
 
 
 //  document.querySelector('.end').addEventListener('click', );  
+    console.log(mouse.x, mouse.y);
 
 }
 
