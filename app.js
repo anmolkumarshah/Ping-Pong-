@@ -22,12 +22,22 @@ window.addEventListener('mousemove', function (event) {
     mouse.y = event.clientY;
 })
 
+window.addEventListener('touchstart', function(event){
+    mouse.x = event.touches[0].clientX;
+    mouse.y = event.touches[0].clienty;
+})
+
+
+
 const mouse = {
     x: undefined,
     y: undefined,
 }
 
 /*******************************************************/
+
+
+
 
 
 /************************* DISTANCE FORMULA ******************************/
@@ -242,7 +252,7 @@ function animate() {
     requestAnimationFrame(animate);
 
     user.y = mouse.y - user.height / 2;
-    comp.y = ballProperty.currentY;
+    comp.y = ballProperty.currentY - comp.height/2;
 
     c.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -258,6 +268,9 @@ function animate() {
 
     if (player.testCollision(ball)) {
         increaseSpeed();
+        if(player == 'user'){
+            score.user ++;
+        }
         let decider = player.collisionPoint(ball)
         if (decider === 0) {
             ballProperty.dy = -ballProperty.dy;
@@ -287,3 +300,52 @@ document.querySelector('.play').addEventListener('click', function(){
 });
 
 //console.log(getDistance(1,2,4,3));
+
+
+
+/*function showCoordinates(event) {
+  var x = event.touches[0].clientX;
+  var y = event.touches[0].clientY;
+    return x,y;
+}
+
+console.log(showCoordinates());*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
