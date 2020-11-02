@@ -18,7 +18,11 @@ canvas{
   /*  margin: 0 40px;
     display: block;*/
 /*    width: 1000px;*/
+<<<<<<< HEAD
     width: 60%;
+=======
+    width: 80%;
+>>>>>>> b7d87e86d7010f7ad318212ab73ebd40e85ce894
     height: 400px;
     position: absolute;
     top: 10;
