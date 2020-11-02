@@ -1,8 +1,8 @@
 console.log("Made by Anmolkumar Shah");
 
 const canvas = document.querySelector('canvas');
-canvas.height = window.innerHeight - 100;
-canvas.width = window.innerWidth - 100;
+canvas.height = window.innerHeight - 200;
+canvas.width = window.innerWidth - 200;
 
 const c = canvas.getContext('2d');
 
